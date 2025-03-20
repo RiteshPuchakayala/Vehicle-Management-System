@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+.container {
+    display: flex;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.image-container img {
+    width: 200px;
+    margin-right: 20px;
+}
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+h2 {
+    margin-bottom: 15px;
+}
+.google-btn,
+.apple-btn {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+.google-btn {
+    background-color: #4285F4;
+}
+.apple-btn {
+    background-color: black;
+}
+.divider {
+    margin: 10px 0;
+    text-align: center;
+}
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+input {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.forgot-password {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+.home-page {
+    background-color: #009999;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}

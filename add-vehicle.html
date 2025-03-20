@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Vehicle</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150vh;
+            flex-direction: column;
+        }
+        .container {
+            width: 50%;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        textarea {
+            resize: none;
+            height: 80px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #e64a19;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Add Vehicle</h2>
+        <form id="vehicleForm">
+            <label>Brand Name</label>
+            <input type="text" placeholder="Enter Brand Name" required>
+            <label>Vehicle Name</label>
+            <input type="text" placeholder="Enter Vehicle Name" required>
+            <label>Model Number</label>
+            <input type="text" placeholder="Enter Vehicle Model Number" required>
+            <label>Registration Number</label>
+            <input type="text" placeholder="Enter Vehicle Registration Number" required>
+            <label>Vehicle Type</label>
+            <select>
+                <option>Choose Vehicle Type</option>
+                <option>Two Wheeler</option>
+                <option>Three Wheeler</option>
+                <option>Four Wheeler</option>
+                <option>8 Wheeler</option>
+            </select>
+            <label>Vehicle Subtype</label>
+            <input type="text" placeholder="Enter Vehicle Subtype (e.g., car, truck, etc.)" required>
+            <label>Variant</label>
+            <select>
+                <option>Choose Variant</option>
+                <option>Electric</option>
+                <option>Petrol</option>
+                <option>Diesel</option>
+            </select>
+            <label>Transmission</label>
+            <select>
+                <option>Choose Transmission</option>
+                <option>Automatic</option>
+                <option>Manual</option>
+            </select>
+            <label>Engine Number</label>
+            <input type="text" placeholder="Enter Engine Number">
+            <label>Description</label>
+            <textarea placeholder="Enter Description"></textarea>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("vehicleForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Vehicle successfully added to your list!");
+        });
+    </script>
+</body>
+</html>

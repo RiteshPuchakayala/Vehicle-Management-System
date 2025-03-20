@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Offers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .vehicle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+        .vehicle-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: #fff;
+        }
+        .vehicle-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .vehicle-card h3 {
+            margin: 10px 0;
+        }
+        .vehicle-card p {
+            color: red;
+            font-weight: bold;
+        }
+        .book-btn {
+            display: inline-block;
+            background: orange;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>VEHICLES FOR RENT</h1>
+        <div class="vehicle-grid">
+            <div class="vehicle-card">
+                <img src="toyota1.jpeg" alt="Car 1">
+                <h3>TOYOTA CAR</h3>
+                <p>Start per day $100</p>
+                <a href="booknow.html" class="book-btn">Book Now</a>
+            </div>
+            <div class="vehicle-card">
+                <img src="mahindra1.jpeg" alt="Car 2">
+                <h3>MAHINDRA CAR</h3>
+                <p>Start per day $80</p>
+                <a href="booknow.html" class="book-btn">Book Now</a>
+            </div>
+            <div class="vehicle-card">
+                <img src="Unicorn1.jpeg" alt="Bike 1">
+                <h3>HONDA Unicorn</h3>
+                <p>Start per day $50</p>
+                <a href="booknow.html" class="book-btn">Book Now</a>
+            </div>
+            <div class="vehicle-card">
+                <img src="innova1.jpeg" alt="Car 2">
+                <h3>Innova(7 seater)</h3>
+                <p>Start per day $75</p>
+                <a href="booknow.html" class="book-btn">Book Now</a>
+            </div>
+            <div class="vehicle-card">
+                <img src="hero1.jpeg" alt="Bike 1">
+                <h3>HERO cycle</h3>
+                <p>Start per day $10</p>
+                <a href="booknow.html" class="book-btn">Book Now</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

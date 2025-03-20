@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+        input, select, textarea {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submit-btn {
+            background: orange;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .submit-btn:hover {
+            background: darkorange;
+        }
+    </style>
+    <script>
+        function confirmBooking(event) {
+            event.preventDefault();
+            let name = document.getElementById("name").value;
+            let mobile = document.getElementById("mobile").value;
+            let email = document.getElementById("email").value;
+            let license = document.getElementById("license").value;
+            let address = document.getElementById("address").value;
+            let pickup = document.getElementById("pickup").value;
+            let dropoff = document.getElementById("dropoff").value;
+            let message = `Confirm Booking Details:\n\n
+            Name: ${name}\n
+            Mobile: ${mobile}\n
+            Email: ${email}\n
+            License Number: ${license}\n
+            Address: ${address}\n
+            Pickup Date: ${pickup}\n
+            Dropoff Date: ${dropoff}`;
+            if (confirm(message)) {
+                alert("Booking submitted successfully!");
+                document.getElementById("bookingForm").submit();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Book Now</h2>
+        <form onsubmit="confirmBooking(event)">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="license">Driving License Number:</label>
+            <input type="text" id="license" name="license" required>
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+            <label for="pickup">Pickup Date:</label>
+            <input type="date" id="pickup" name="pickup" required>
+            <label for="dropoff">Dropoff Date:</label>
+            <input type="date" id="dropoff" name="dropoff" required>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

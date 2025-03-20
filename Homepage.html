@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Vehicle Data Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+        .top-bar {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .navbar {
+            background-color: #ff5722;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar-left {
+            display: flex;
+            align-items: center;
+        }
+        .navbar-right {
+            margin-left: auto;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 20px;
+            position: relative;
+            background: url('heroimage.jpeg') no-repeat center center/cover;
+            width: 100%;
+        }
+        .hero-text {
+            width: 48%;
+            color: black;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .services-page {
+            display: none;
+            background-color: black;
+            height: 100vh;
+            width: 100%;
+            color: white;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .services-page button {
+            background-color: #ff5722;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        .services-page button:hover {
+            background-color: #e64a19;
+        }
+        .about-us {
+            display: flex;
+            align-items: center;
+            padding: 50px;
+        }
+        .about-us img {
+            width: 50%;
+            height: auto;
+        }
+        .about-us-text {
+            width: 50%;
+            padding-left: 20px;
+        }
+        .info-bar {
+            background-color: #ff5722;
+            height: 50px;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            position: relative;
+            width: 100%;
+            margin-top: 0;
+        }
+    </style>
+    <script>
+        function openServicesPage() {
+            document.getElementById("services-page").style.display = "flex";
+        }
+        function closeServicesPage() {
+            document.getElementById("services-page").style.display = "none";
+        }
+    </script>
+</head>
+<body>
+    <div class="top-bar">Vehicle Management System</div>
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="javascript:void(0);" onclick="openServicesPage()">Services</a>
+        </div>
+        <div class="navbar-right">
+            <a href="login.html">Login</a>
+            <button onclick="toggleDarkMode()" style="position: fixed; top: 10px; right: 10px; padding: 10px; 
+                            background: #ff5722; color: white; border: none; border-radius: 5px;">Dark Mode</button>
+        </div>
+    </div>
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Vehicle Record <span>For You</span></h1>
+            <p>Every mile tells a story—keep your record clean.</p>
+        </div>
+        <div class="hero-text">
+            <h1>Vehicle Renting <span>Made Easy</span></h1>
+            <p>Why own when you can rent and ride?</p>
+        </div>
+    </div>
+    <div id="about" class="about-us">
+        <img src="aboutus.jpeg" alt="About Us Image">
+        <div class="about-us-text">
+            <h2>ABOUT <span>US</span></h2>
+            <p>Welcome to our Vehicle Management System, your one-stop solution for seamless vehicle renting and secure record management. We strive to make vehicle rentals easy, reliable, and accessible while ensuring transparency in maintaining vehicle histories. Whether you need a vehicle for a short trip or long-term use, our platform offers a hassle-free renting experience. At the same time, we provide a secure digital repository for vehicle records, including ownership details, maintenance logs, and accident history, ensuring trust and accountability for both renters and owners.
+                Our mission is to simplify vehicle management by integrating advanced technology with user-friendly services. With a focus on security and efficiency, we ensure that every rental transaction is smooth and every vehicle record is well-documented. Our system is designed to enhance customer confidence by providing verified vehicle histories and reliable rental services. Whether you are an individual looking for a ride or a business managing a fleet, our platform offers the convenience and transparency you need. Join us in revolutionizing vehicle renting and record-keeping with a system built for trust and efficiency.</p>
+        </div>
+    </div>
+    <div class="info-bar">
+        <span>📍 #123 Green Residency, Gachibowli, Hyderabad, India.</span>
+        <span>☎ 9898989231</span>
+        <span>📧 vmsweb@gmail.com</span>
+    </div>
+    <div id="services-page" class="services-page">
+        <button onclick="location.href='vehicle-renting-main.html'">Vehicle Renting</button>
+        <button onclick="location.href='vehicle-record-main.html'">Vehicle Record</button>
+        <button onclick="closeServicesPage()">Close</button>
+    </div>
+    <script>
+        window.onload = function() {
+            alert("Welcome to the Motor Vehicle Data Management System!");
+        };
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
